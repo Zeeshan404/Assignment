@@ -25,7 +25,8 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    { }
+    {
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -33,11 +34,11 @@ class UserController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(UserRequest $request)
     {
-        $data = $request->all();
+        $data = $request->validated();
         $user = User::create($data);
-        return (string) view('partial')->with('users', User::all());
+        return (string)view('partial')->with('users', User::all());
     }
 
     /**
@@ -48,7 +49,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        return User::find($id);
     }
 
     /**
@@ -71,10 +72,11 @@ class UserController extends Controller
      */
     public function update(UserRequest $request, $id)
     {
-        dd("success");
         $data = $request->validated();
         $user = User::find($id);
         $user->update($data);
+        return $id;
+
     }
 
     /**
@@ -87,5 +89,7 @@ class UserController extends Controller
     {
         $user = User::find($id);
         $user->delete();
+        return $id;
+
     }
 }
