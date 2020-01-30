@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="744a8baf-0ca6-4a8b-a670-c07db12d9f86" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/passport.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/passport.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../app/Http/Requests/UserRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Requests/UserRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../resources/views/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../resources/views/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../resources/views/partial.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/partial.blade.php" afterDir="false" />
@@ -204,7 +204,9 @@
       <workItem from="1580277079552" duration="310000" />
       <workItem from="1580277443375" duration="15000" />
       <workItem from="1580277494102" duration="347000" />
-      <workItem from="1580277909047" duration="24230000" />
+      <workItem from="1580277909047" duration="24878000" />
+      <workItem from="1580307348078" duration="4000" />
+      <workItem from="1580370798207" duration="14447000" />
     </task>
     <servers />
   </component>
@@ -240,17 +242,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="281" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1580295079935" />
-    <state x="276" y="234" key="com.intellij.ide.util.TipDialog" timestamp="1580277909102">
+    <state x="276" y="234" key="com.intellij.ide.util.TipDialog" timestamp="1580370798927">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="276" y="234" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1580277909102" />
+    <state x="276" y="234" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1580370798927" />
     <state x="339" y="157" key="run.anything.popup" timestamp="1580304770955">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1580304770955" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1580302004531">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1580387035038">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1580302004531" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1580387035038" />
   </component>
 </project>

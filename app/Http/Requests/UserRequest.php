@@ -3,6 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class UserRequest extends FormRequest
 {
@@ -21,13 +23,13 @@ class UserRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public function rules(Request $request)
     {
         return [
             'fname' => 'required',
             'lname' => 'required',
             'age' => 'required',
-            'cnic' => 'required',
+            'cnic' => Rule::requiredIf(($request->age) >= 18),
             'email' => 'required',
             'password' => 'required',
         ];

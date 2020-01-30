@@ -23,9 +23,8 @@
 
                 <div class="card-header">
                     <h1 class="text-center">Users</h1>
-                    <a href="#" class="btn btn-success btn-lg float-right mb-2" data-toggle="modal"
-                       data-target="#myModal">
-                        +Add New User</a>
+                    <button onclick="createuser()" class="btn btn-success btn-lg float-right mb-2">+Add New User
+                    </button>
                 </div>
                 <div class="card-body">
                     <table class="table">
@@ -50,8 +49,10 @@
     </div>
 </div>
 
+
 @include('create')
 @include('confirmation')
+{{--@include('edit')--}}
 
 
 
@@ -65,27 +66,26 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 <script>
-    $("#create-form").submit(function (event) {
-        event.preventDefault();
-        var that = $(this),
-            url = that.attr('action'),
-            method = that.attr('method'),
-            data = $("#create-form").serialize();
-
-        $.ajax({
-            url: url,
-            type: method,
-            data: data,
-            success: function (response) {
-                $('tbody').html(response);
-                $('#myModal').modal('hide');
-                $('#myModal').on('hidden', function () {
-                    $(this).removeData('modal');
-                });
-                alert("User Added");
-            }
+    function createuser() {
+        $('#myModal').modal('show');
+        $('.modal-title').html('Add a New User');
+        $('#submit').html('Create');
+        $('input').val('');
+        $("#modal-form").submit(function (event) {
+            event.preventDefault();
+            var that = $(this);
+            $.ajax({
+                url: that.attr('action'),
+                type: that.attr('method'),
+                data: $("#create-form").serialize(),
+                success: function (response) {
+                    $('tbody').html(response);
+                    $('#myModal').modal('hide');
+                    alert("User Added");
+                }
+            });
         });
-    });
+    }
 
 </script>
 <script>
@@ -95,30 +95,33 @@
             url: '/api/users/' + id,
             type: 'Get',
             success: function (data) {
-                var data=data;
-                console.log(data);
-                // $('#editModal').modal('show');
+                var data = data;
+                $('#myModal').modal('show');
+                $('#submit').html('Update');
+                $('.modal-title').html('Editing a user');
+                delete data.id;
+                Object.keys(data).forEach(
+                    e => $(`#${e}`).val(`${data[e]}`)
+                );
             }
+        });
+        $("#modal-form").submit(function (event) {
+            event.preventDefault();
+            var that = $(this);
+            $.ajax({
+                url: that.attr('action') + '/' + user_id,
+                type: 'PATCH',
+                data: $("#modal-form").serialize(),
+                success: function (response) {
+                    $('#row_'+user_id).replaceWith(response);
+                    that.closest('tr').html('yes');
+                    $('#myModal').modal('hide');
+                    alert("Editing Successful");
+                }
+            });
         });
 
     }
-
-    // $(".edit-btn").on('click', function (e) {
-    //     $("#editModal").modal('show');
-    //     $(".edit-form").submit(function (event) {
-    //         event.preventDefault();
-    //         var that = $(this);
-    //
-    //         $.ajax({
-    //             url: that.attr('action'),
-    //             type: 'PATCH',
-    //             data: $("#edit-form").serialize(),
-    //             success: function (response) {
-    //                 that.closest('tr').val(response);
-    //             }
-    //         });
-    //     });
-    // });
 
 
 </script>

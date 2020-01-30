@@ -9,7 +9,7 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
-                <form id="create-form" action="{{ route('users.store') }}" method="POST">
+                <form id="modal-form" action="{{ route('users.store') }}" method="POST">
                     @csrf
                     <div class="form-group">
                         <label for="fname">FirstName</label>
@@ -28,16 +28,15 @@
                         <input name="cnic" type="text" class="form-control" id="cnic">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input name="email" type="text" class="form-control" id="exampleInputEmail1"
-                               aria-describedby="emailHelp">
+                        <label for="email">Email address</label>
+                        <input name="email" type="text" class="form-control" id="email">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+                        <label for="password">Password</label>
+                        <input name="password" type="password" class="form-control" id="password">
                     </div>
 
-                    <button id="create"  type="submit" class="btn btn-primary">Create</button>
+                    <button id="submit"  type="submit" class="btn btn-primary">Create</button>
                 </form>
             </div>
             <div class="modal-footer">

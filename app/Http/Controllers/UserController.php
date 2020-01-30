@@ -75,7 +75,8 @@ class UserController extends Controller
         $data = $request->validated();
         $user = User::find($id);
         $user->update($data);
-        return $id;
+        $users = [$user];
+        return (string)view('partial',compact('users'));
 
     }
 
