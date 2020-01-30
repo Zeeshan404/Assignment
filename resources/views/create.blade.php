@@ -13,6 +13,7 @@
                     @csrf
                     <div class="form-group">
                         <label for="fname">FirstName</label>
+                        <input name="id" type="hidden" class="form-control" id="id">
                         <input name="fname" type="text" class="form-control" id="fname">
                     </div>
                     <div class="form-group">

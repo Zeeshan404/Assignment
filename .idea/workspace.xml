@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="744a8baf-0ca6-4a8b-a670-c07db12d9f86" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../app/Http/Requests/UserRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/../app/Http/Requests/UserRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../resources/views/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../resources/views/partial.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/partial.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/welcome.blade.php" afterDir="false" />
     </list>
@@ -206,7 +203,7 @@
       <workItem from="1580277494102" duration="347000" />
       <workItem from="1580277909047" duration="24878000" />
       <workItem from="1580307348078" duration="4000" />
-      <workItem from="1580370798207" duration="14447000" />
+      <workItem from="1580370798207" duration="19405000" />
     </task>
     <servers />
   </component>

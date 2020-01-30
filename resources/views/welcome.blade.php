@@ -14,7 +14,9 @@
 </head>
 
 <body>
+<div id="error">
 
+</div>
 
 <div class="container mt-5">
     <div class="row">
@@ -71,21 +73,27 @@
         $('.modal-title').html('Add a New User');
         $('#submit').html('Create');
         $('input').val('');
-        $("#modal-form").submit(function (event) {
-            event.preventDefault();
-            var that = $(this);
-            $.ajax({
-                url: that.attr('action'),
-                type: that.attr('method'),
-                data: $("#create-form").serialize(),
-                success: function (response) {
-                    $('tbody').html(response);
-                    $('#myModal').modal('hide');
-                    alert("User Added");
-                }
-            });
-        });
     }
+
+    $("#modal-form").submit(function (event) {
+        console.log(that.attr('method'));
+
+        event.preventDefault();
+        var that = $(this);
+        $.ajax({
+            url: that.attr('action'),
+            type: that.attr('method'),
+            data: $("#modal-form").serialize(),
+            success: function (response) {
+                alert("yes");
+                $('tbody').html(response);
+                $('#myModal').modal('hide');
+                alert("User Added");
+            }
+
+        });
+    });
+
 
 </script>
 <script>
@@ -99,29 +107,31 @@
                 $('#myModal').modal('show');
                 $('#submit').html('Update');
                 $('.modal-title').html('Editing a user');
-                delete data.id;
                 Object.keys(data).forEach(
                     e => $(`#${e}`).val(`${data[e]}`)
                 );
             }
         });
-        $("#modal-form").submit(function (event) {
-            event.preventDefault();
-            var that = $(this);
-            $.ajax({
-                url: that.attr('action') + '/' + user_id,
-                type: 'PATCH',
-                data: $("#modal-form").serialize(),
-                success: function (response) {
-                    $('#row_'+user_id).replaceWith(response);
-                    that.closest('tr').html('yes');
-                    $('#myModal').modal('hide');
-                    alert("Editing Successful");
-                }
-            });
-        });
-
     }
+
+
+    $("#modal-form").submit(function (event) {
+        let user_id = $('#id').val();
+        event.preventDefault();
+        var that = $(this);
+        $.ajax({
+            url: that.attr('action') + '/' + user_id,
+            type: 'PATCH',
+            data: $("#modal-form").serialize(),
+            success: function (response) {
+                $('#row_' + user_id).replaceWith(response);
+                $('#myModal').modal('hide');
+                alert('edited');
+
+            }
+
+        });
+    });
 
 
 </script>
