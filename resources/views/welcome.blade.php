@@ -70,35 +70,34 @@
 <script>
     function createuser() {
         $('#myModal').modal('show');
-        $('.modal-title').html('Add a New User');
+        $('#modal-title').html('Add a New User');
         $('#submit').html('Create');
         $('input').val('');
     }
-
-    $("#modal-form").submit(function (event) {
-        console.log(that.attr('method'));
-
-        event.preventDefault();
-        var that = $(this);
-        $.ajax({
-            url: that.attr('action'),
-            type: that.attr('method'),
-            data: $("#modal-form").serialize(),
-            success: function (response) {
-                alert("yes");
-                $('tbody').html(response);
-                $('#myModal').modal('hide');
-                alert("User Added");
-            }
-
+    if (($('#modal-title').html()) === 'Add a New User') {
+        console.log("i am create form");
+        $("#modal-form").submit(function (event) {
+            var that = $(this);
+            event.preventDefault();
+            $.ajax({
+                url: that.attr('action'),
+                type: 'POST',
+                data: $("#modal-form").serialize(),
+                success: function (response) {
+                    $('tbody').html(response);
+                    $('#myModal').modal('hide');
+                    alert("User Added");
+                }
+            });
         });
-    });
+    }
+
 
 
 </script>
 <script>
     function fetchuser(id) {
-        var user_id = id;
+        $('#modal-title').html('Editing a user');
         $.ajax({
             url: '/api/users/' + id,
             type: 'Get',
@@ -106,7 +105,6 @@
                 var data = data;
                 $('#myModal').modal('show');
                 $('#submit').html('Update');
-                $('.modal-title').html('Editing a user');
                 Object.keys(data).forEach(
                     e => $(`#${e}`).val(`${data[e]}`)
                 );
@@ -114,27 +112,25 @@
         });
     }
 
-
     $("#modal-form").submit(function (event) {
-        let user_id = $('#id').val();
-        event.preventDefault();
-        var that = $(this);
-        $.ajax({
-            url: that.attr('action') + '/' + user_id,
-            type: 'PATCH',
-            data: $("#modal-form").serialize(),
-            success: function (response) {
-                $('#row_' + user_id).replaceWith(response);
-                $('#myModal').modal('hide');
-                alert('edited');
-
-            }
-
-        });
+        if (($('#modal-title').html()) === 'Editing a user') {
+            let user_id = $('#id').val();
+            event.preventDefault();
+            let that = $(this);
+            $.ajax({
+                url: that.attr('action') + '/' + user_id,
+                type: 'PATCH',
+                data: $("#modal-form").serialize(),
+                success: function (response) {
+                    $('#row_' + user_id).replaceWith(response);
+                    $('#myModal').modal('hide');
+                    alert('edited');
+                }
+            });
+        }
     });
-
-
 </script>
+
 <script>
 
 

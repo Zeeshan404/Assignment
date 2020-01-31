@@ -4,7 +4,6 @@
     <list default="true" id="744a8baf-0ca6-4a8b-a670-c07db12d9f86" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../resources/views/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resources/views/partial.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/partial.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -204,6 +203,13 @@
       <workItem from="1580277909047" duration="24878000" />
       <workItem from="1580307348078" duration="4000" />
       <workItem from="1580370798207" duration="19405000" />
+      <workItem from="1580449472220" duration="467000" />
+      <workItem from="1580450012536" duration="92000" />
+      <workItem from="1580450130915" duration="21000" />
+      <workItem from="1580450181889" duration="2952000" />
+      <workItem from="1580453748339" duration="5000" />
+      <workItem from="1580463984886" duration="2218000" />
+      <workItem from="1580466330430" duration="811000" />
     </task>
     <servers />
   </component>
@@ -239,17 +245,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="281" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1580295079935" />
-    <state x="276" y="234" key="com.intellij.ide.util.TipDialog" timestamp="1580370798927">
+    <state x="276" y="234" key="com.intellij.ide.util.TipDialog" timestamp="1580466334893">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="276" y="234" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1580370798927" />
-    <state x="339" y="157" key="run.anything.popup" timestamp="1580304770955">
+    <state x="276" y="234" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1580466334893" />
+    <state x="339" y="157" key="run.anything.popup" timestamp="1580451079017">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1580304770955" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1580387035038">
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1580451079017" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1580450977669">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1580387035038" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1580450977669" />
   </component>
 </project>

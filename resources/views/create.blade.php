@@ -5,11 +5,11 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Create New User</h4>
+                <h4 id="modal-title">Create New User</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
-                <form id="modal-form" action="{{ route('users.store') }}" method="POST">
+                <form id="modal-form" action="{{ route('users.store') }}" method="">
                     @csrf
                     <div class="form-group">
                         <label for="fname">FirstName</label>
